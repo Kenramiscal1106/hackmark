@@ -1,5 +1,10 @@
-<svelte:head>
-  <title>HTML introduction</title>
-</svelte:head>
 <script lang="ts">
+  import Navbar from "../components/navbar.svelte";
 </script>
+<svelte:head>
+  <title>HTML Home</title>
+</svelte:head>
+<Navbar/>
+<main>
+  <h1>Home</h1>
+</main>
