@@ -6,5 +6,7 @@
 </svelte:head>
 <Navbar/>
 <main>
-  <h1>Home</h1>
+  <h1>HTML</h1>
+  <p>HTML stands for <b>H</b>ypertext <b>M</b>arkup <b>L</b>anguage</p>
+  <p>HTML is used as a markup language of websites</p>
 </main>
