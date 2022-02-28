@@ -20,7 +20,7 @@
  
 </nav>
 <style lang="scss" >
-  @import '../../static/variables';
+  @import '../variables';
   nav {
   display: flex;
   background: $nav_bg;
