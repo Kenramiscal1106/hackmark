@@ -1,0 +1,1 @@
+Add "marked" module to the editor of markdown
