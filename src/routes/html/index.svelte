@@ -4,7 +4,7 @@
 <svelte:head>
   <title>HTML</title>
 </svelte:head>
-<Navbar/>
+<Navbar target="/html"/>
 <main>
   <h1>HTML</h1>
   <p>HTML stands for <b>H</b>ypertext <b>M</b>arkup <b>L</b>anguage</p>
