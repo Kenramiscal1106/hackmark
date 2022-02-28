@@ -21,7 +21,6 @@
  
 </nav>
 <style lang="scss" >
-  @import './navbar';
   .sidebar a {
   display: block;
   }
