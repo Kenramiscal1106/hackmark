@@ -21,6 +21,7 @@
 </nav>
 <style lang="scss" >
   @import '../variables';
+  @import '../styles';
   nav {
   display: flex;
   background: $nav_bg;
