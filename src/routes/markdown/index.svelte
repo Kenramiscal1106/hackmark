@@ -4,7 +4,6 @@
 <svelte:head>
   <title>Markdown</title>
 </svelte:head>
-<Navbar vertical={false} target="/markdown"/>
 <Navbar links={[
   {title:'Introduction',link:'/introduction'},
   {title:'How To',link:'/how-to'},
