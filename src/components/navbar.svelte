@@ -5,7 +5,7 @@
   }
   export let vertical:boolean = true;
   export let extraLinks: linkFormat[] = [];
-  export let firstPath: string;
+  export let firstPath: string = '';
   let linksAll:linkFormat[] = [
     {link:'/html',title:'HTML'},
     {link:'/css',title:'CSS'},
@@ -28,12 +28,15 @@
   {/if}
  
 </nav>
-<style>
-  .sidebar a {display:block;}
+<style lang="scss" >
+  @import './navbar';
+  .sidebar a {
+  display: block;
+  }
   .sidebar {
     display: flex;
   }
   .vertical > div {
-    display:flex;
+    display: flex;
   }
 </style>
