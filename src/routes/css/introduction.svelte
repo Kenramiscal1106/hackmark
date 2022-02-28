@@ -1,7 +1,6 @@
 <script lang="ts">
   import Navbar from "../../components/navbar.svelte";
 </script>
-<Navbar target="/css"/>
 <Navbar target="/css/introduction" firstPath="/css" links={[
   {link:'/introduction', title:'CSS Introduction'},
   {link:'/howto', title: 'CSS How To'}
