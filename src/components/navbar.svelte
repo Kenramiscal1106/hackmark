@@ -4,9 +4,8 @@
     title:string
   }
   export let vertical:boolean = true;
-  export let extraLinks: linkFormat[] = [];
   export let firstPath: string = '';
-  let linksAll:linkFormat[] = [
+  export let links:linkFormat[] = [
     {link:'/html',title:'HTML'},
     {link:'/css',title:'CSS'},
     {link:"/markdown", title:'Markdown'},
@@ -15,17 +14,10 @@
 </script>
 <nav class={vertical ? 'sidebar' : 'vertical'}>
   <div>
-    {#each linksAll as link}
-      <a href={link.link}>{link.title}</a>
+    {#each links as link}
+      <a href={`${firstPath}${link.link}`}>{link.title}</a>
     {/each}
   </div>
-  {#if extraLinks.length !== 0}
-    <div>
-      {#each extraLinks as link}
-        <a href={`${firstPath}${link.link}`}>{link.title}</a>
-      {/each}
-    </div>
-  {/if}
  
 </nav>
 <style lang="scss" >
