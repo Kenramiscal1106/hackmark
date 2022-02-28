@@ -1,7 +1,7 @@
 <script lang="ts">
   import Navbar from "../../components/navbar.svelte";
 </script>
-<Navbar/>
+<Navbar target="/html"/>
 <svelte:head>
   <title>HTML Introduction</title>
 </svelte:head>
