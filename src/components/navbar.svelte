@@ -1,11 +1,39 @@
-<nav class="navigation">
-  <a href="/">Index</a>
-  <a href="/html/home">HTML</a>
-  <a href="/css/home">CSS</a>
-  <a href="/markdown/home">Markdown</a>
-</nav>
 <script lang="ts">
+  interface linkFormat {
+    link:string,
+    title:string
+  }
+  export let vertical:boolean = true;
+  export let extraLinks: linkFormat[] = [];
+  export let firstPath: string;
+  let linksAll:linkFormat[] = [
+    {link:'/html',title:'HTML'},
+    {link:'/css',title:'CSS'},
+    {link:"/markdown", title:'Markdown'},
+    {link:'/', title:'HOME'}
+  ]
 </script>
+<nav class={vertical ? 'sidebar' : 'vertical'}>
+  <div>
+    {#each linksAll as link}
+      <a href={link.link}>{link.title}</a>
+    {/each}
+  </div>
+  {#if extraLinks.length !== 0}
+    <div>
+      {#each extraLinks as link}
+        <a href={`${firstPath}${link.link}`}>{link.title}</a>
+      {/each}
+    </div>
+  {/if}
+ 
+</nav>
 <style>
-  .navigation > a {display:block;}
+  .sidebar a {display:block;}
+  .sidebar {
+    display: flex;
+  }
+  .vertical > div {
+    display:flex;
+  }
 </style>
