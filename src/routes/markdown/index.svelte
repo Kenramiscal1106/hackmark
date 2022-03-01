@@ -1,5 +1,7 @@
 <script lang="ts">
   import Navbar from "../../components/navbar.svelte";
+  import { tab } from "../stores";
+  tab.set('/markdown')
 </script>
 <svelte:head>
   <title>Markdown</title>

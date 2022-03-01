@@ -1,3 +1,7 @@
+<script lang="ts">
+import { tab } from "../stores";
+  tab.set('/html')
+</script>
 <svelte:head>
   <title>HTML</title>
 </svelte:head>

@@ -1,4 +1,9 @@
+<script lang="ts">
+import { tab } from "./stores";
 
+
+  tab.set('/')
+</script>
 <svelte:head>
   <title>Hackmark - references for html and css </title>
 </svelte:head>
