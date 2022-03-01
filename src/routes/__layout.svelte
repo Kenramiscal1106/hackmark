@@ -1,12 +1,16 @@
 <script lang="ts">
+import { tab } from "./stores";
+  let activeTab : string;
+  tab.subscribe(current => {
+    activeTab = current
+  }
+  )
+
   interface linkFormat {
     link:string,
     title:string
   }
-  export let target: string = '';
-  export let vertical:boolean = false;
-  export let firstPath: string = '';
-  export let links:linkFormat[] = [
+  let links:linkFormat[] = [
     {link:'/', title:'HOME'},
     {link:'/html',title:'HTML'},
     {link:'/css',title:'CSS'},
@@ -14,9 +18,9 @@
   ]
 </script>
 <main>
-  <nav class={vertical ? 'sidebar' : 'vertical'}>
+  <nav class='navtop'>
       {#each links as link}
-        <a href={`${firstPath}${link.link}`} class:active={target === link.link}>{link.title}</a>
+        <a href={link.link} class:active={activeTab == link.link}>{link.title}</a>
       {/each}
    
   </nav>
@@ -28,9 +32,6 @@
   nav {
   display: flex;
   background: $nav_bg;
-  &.sidebar {
-    display: grid;
-  }
   > a {
     display: block;
     color:$nav_text; 
